@@ -36,3 +36,24 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
 })
+
+vim.api.nvim_create_autocmd("BufEnter", {
+  group = augroup,
+  callback = function()
+    if vim.lsp.inlay_hint then
+      vim.lsp.inlay_hint.enable(false)
+    end
+  end,
+})
+
+vim.api.nvim_create_autocmd("BufWritePre", {
+  group = augroup,
+  pattern = { "*.c", "*.h" },
+  callback = function()
+    if vim.fn.executable("clang-format") == 1 then
+      local view = vim.fn.winsaveview()
+      vim.cmd("silent keepjumps %!clang-format")
+      vim.fn.winrestview(view)
+    end
+  end,
+})
