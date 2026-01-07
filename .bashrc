@@ -8,4 +8,9 @@ source ~/.local/share/omarchy/default/bash/rc
 # Add your own exports, aliases, and functions here.
 #
 # Make an alias for invoking commands you use constantly
-# alias p='python'
+alias p='python'
+alias rm='rm -i'
+alias tmuxn='tmux new -s'
+alias tmuxs='tmux attach -t'
+alias tmuxw='tmux rename-window'
+
