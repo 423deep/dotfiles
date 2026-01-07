@@ -1,0 +1,5 @@
+config:
+  MD022: true
+  MD031: true
+  MD026: false
+  MD013: false
