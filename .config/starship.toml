@@ -1,0 +1,15 @@
+add_newline = false
+command_timeout = 200
+format = "$directory$character"
+
+[character]
+error_symbol = "❯ "
+success_symbol = "❯ "
+
+[directory]
+format = "[$path]($style) "
+style = "none"
+truncation_length = 2
+truncation_symbol = "…/"
+repo_root_style = "none"
+repo_root_format = "[$repo_root]($repo_root_style)[$path]($style) "

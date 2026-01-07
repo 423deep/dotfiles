@@ -1,6 +1,9 @@
 # If not running interactively, don't do anything (leave this at the top of this file)
 [[ $- != *i* ]] && return
 
+# Ensure Starship loads the dotfiles config when Omarchy initializes it.
+export STARSHIP_CONFIG="$HOME/dotfiles/.config/starship.toml"
+
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
 source ~/.local/share/omarchy/default/bash/rc
@@ -12,6 +15,7 @@ HISTFILESIZE=20000
 HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 PROMPT_COMMAND='history -a'
+PS1='\[\e[36m\]\w\[\e[0m\] \[\e[36m\]❯\[\e[0m\] '
 
 # Make an alias for invoking commands you use constantly
 alias p='python'
@@ -27,4 +31,3 @@ alias gp='git push'
 alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 alias ip='ip -color=auto'
-
