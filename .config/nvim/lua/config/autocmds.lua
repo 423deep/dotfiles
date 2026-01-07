@@ -9,6 +9,24 @@
 
 local augroup = vim.api.nvim_create_augroup("johnny_config", { clear = true })
 
+local function set_inlay_hints(enabled, bufnr)
+  if vim.lsp.inlay_hint then
+    if bufnr then
+      vim.lsp.inlay_hint.enable(enabled, { bufnr = bufnr })
+    else
+      vim.lsp.inlay_hint.enable(enabled)
+    end
+    return
+  end
+  if vim.lsp.inlayhint then
+    if bufnr then
+      vim.lsp.inlayhint.enable(enabled, { bufnr = bufnr })
+    else
+      vim.lsp.inlayhint.enable(enabled)
+    end
+  end
+end
+
 vim.api.nvim_create_autocmd("FileType", {
   group = augroup,
   pattern = { "c", "cpp" },
@@ -31,18 +49,17 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("LspAttach", {
   group = augroup,
   callback = function(args)
-    if vim.lsp.inlay_hint then
-      vim.lsp.inlay_hint.enable(false, { bufnr = args.buf })
-    end
+    set_inlay_hints(false, args.buf)
+    vim.defer_fn(function()
+      set_inlay_hints(false, args.buf)
+    end, 50)
   end,
 })
 
 vim.api.nvim_create_autocmd("BufEnter", {
   group = augroup,
   callback = function()
-    if vim.lsp.inlay_hint then
-      vim.lsp.inlay_hint.enable(false)
-    end
+    set_inlay_hints(false)
   end,
 })
 
