@@ -30,7 +30,7 @@
     "tooltip-format-disconnected": "Disconnected",
     "interval": 3,
     "nospacing": 1,
-    "on-click": "ghostty --class=Impala -e impala",
+    "on-click": "omarchy-launch-wifi",
     "on-click-right": "nm-connection-editor",
   },
   "network#speed": {
@@ -72,8 +72,8 @@
   "pulseaudio": {
     "format": "{volume}% {icon}",
     "format-muted": "󰝟 {volume}%",
-    "on-click": "ghostty --class=Wiremix -e wiremix",
-    "on-click-right": "omarchy-launch-or-focus-tui wiremix",
+    "on-click": "omarchy-launch-audio",
+    "on-click-right": "omarchy-launch-audio",
     "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
     "tooltip-format": "{volume}% | {format_source}",
     "tooltip-format-muted": "Muted ({volume}%)",
@@ -133,7 +133,7 @@
       "", // Icon: temperature-quarter
       "", // Icon: temperature-half
       "", // Icon: temperature-three-quarters
-      "", // Icon: temperature-full
+      "" // Icon: temperature-full
     ],
     "tooltip-format": "Temperature: {temperatureC}°C",
     "on-click": "omarchy-launch-or-focus-tui btop",

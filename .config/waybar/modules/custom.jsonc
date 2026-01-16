@@ -37,7 +37,7 @@
     "interval": 2,
     "format": "{}",
     "tooltip-format": "Network Speed\nClick to open network manager",
-    "on-click": "ghostty --class=Impala -e impala"
+    "on-click": "omarchy-launch-wifi"
   },
   "custom/gpu": {
     "exec": "~/.config/waybar/waybar-gpu.sh",
@@ -46,4 +46,3 @@
     "tooltip": true
   }
 }
-
