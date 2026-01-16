@@ -1,0 +1,20 @@
+[mgr]
+show_hidden = true
+sort_by = "alphabetical"
+sort_sensitive = false
+sort_reverse = false
+sort_dir_first = true
+
+[opener]
+edit = [{ run = 'nvim "$@"', block = true, desc = "Edit" }]
+open = [{ run = 'xdg-open "$@"', desc = "Open" }]
+
+[open]
+rules = [
+  { mime = "text/*", use = "edit" },
+  { name = "*.md", use = "edit" },
+  { mime = "application/json", use = "edit" },
+  { mime = "image/*", use = "open" },
+  { mime = "video/*", use = "open" },
+  { mime = "application/pdf", use = "open" },
+]
