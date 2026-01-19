@@ -1,5 +1,7 @@
 # Dynamic theme colors
 config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
+# Keep terminal palette on Rose Pine regardless of theme changes.
+config-file = ?"~/.config/ghostty/rose-pine-palette.conf"
 
 # Font
 font-family = "JetBrainsMono Nerd Font"

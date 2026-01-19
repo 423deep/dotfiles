@@ -43,3 +43,30 @@ vim.api.nvim_set_hl(0, "NotifyERRORBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "NotifyWARNBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "NotifyTRACEBorder", { bg = "none" })
 vim.api.nvim_set_hl(0, "NotifyDEBUGBorder", { bg = "none" })
+
+-- Darken UI bars to match tmux-style background while keeping editor transparent.
+local bar_bg = "#282828"
+local bar_fg = "#d4be98"
+vim.api.nvim_set_hl(0, "StatusLine", { bg = bar_bg, fg = bar_fg })
+vim.api.nvim_set_hl(0, "StatusLineNC", { bg = bar_bg, fg = bar_fg })
+vim.api.nvim_set_hl(0, "TabLine", { bg = bar_bg, fg = bar_fg })
+vim.api.nvim_set_hl(0, "TabLineFill", { bg = bar_bg, fg = bar_fg })
+vim.api.nvim_set_hl(0, "TabLineSel", { bg = bar_bg, fg = bar_fg, bold = true })
+vim.api.nvim_set_hl(0, "WinBar", { bg = bar_bg, fg = bar_fg })
+vim.api.nvim_set_hl(0, "WinBarNC", { bg = bar_bg, fg = bar_fg })
+vim.api.nvim_set_hl(0, "BufferLineFill", { bg = bar_bg })
+vim.api.nvim_set_hl(0, "BufferLineBackground", { bg = bar_bg, fg = bar_fg })
+vim.api.nvim_set_hl(0, "BufferLineBufferVisible", { bg = bar_bg, fg = bar_fg })
+vim.api.nvim_set_hl(0, "BufferLineBufferSelected", { bg = bar_bg, fg = bar_fg, bold = true })
+vim.api.nvim_set_hl(0, "BufferLineSeparator", { bg = bar_bg, fg = bar_bg })
+vim.api.nvim_set_hl(0, "BufferLineSeparatorVisible", { bg = bar_bg, fg = bar_bg })
+vim.api.nvim_set_hl(0, "BufferLineSeparatorSelected", { bg = bar_bg, fg = bar_bg })
+
+-- Current line and selection highlight (avoid bright white bars).
+local line_bg = "#2b2b2b"
+local visual_bg = "#333333"
+vim.api.nvim_set_hl(0, "CursorLine", { bg = line_bg })
+vim.api.nvim_set_hl(0, "CursorLineNr", { link = "LineNr" })
+vim.api.nvim_set_hl(0, "CursorLineSign", { link = "SignColumn" })
+vim.api.nvim_set_hl(0, "ColorColumn", { bg = line_bg })
+vim.api.nvim_set_hl(0, "Visual", { bg = visual_bg })
