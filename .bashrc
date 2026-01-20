@@ -3,6 +3,7 @@
 
 # Ensure Starship loads the dotfiles config when Omarchy initializes it.
 export STARSHIP_CONFIG="$HOME/dotfiles/.config/starship.toml"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # All the default Omarchy aliases and functions
 # (don't mess with these directly, just overwrite them here!)
