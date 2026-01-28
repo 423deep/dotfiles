@@ -44,5 +44,13 @@
     "interval": 5,
     "return-type": "json",
     "tooltip": true
+  },
+  "custom/hyprscrolling": {
+    "format": "{}",
+    "return-type": "json",
+    "exec": "~/.config/hypr/scripts/hyprscrolling-toggle.sh --status",
+    "interval": 2,
+    "on-click": "~/.config/hypr/scripts/hyprscrolling-toggle.sh",
+    "tooltip": true
   }
 }

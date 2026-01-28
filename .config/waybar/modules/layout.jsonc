@@ -1,8 +1,8 @@
 {
   "modules-left": [
     "custom/omarchy",
-    "hyprland/workspaces",
-    "hyprland/window"
+    "custom/hyprscrolling",
+    "hyprland/workspaces"
   ],
   "modules-center": [
     "clock",

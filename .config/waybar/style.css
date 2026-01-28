@@ -102,6 +102,7 @@ window#waybar.hidden {
 #custom-calendar,
 #custom-netspeed,
 #custom-gpu,
+#custom-hyprscrolling,
 #clock,
 #tray-expander,
 #disk,
@@ -119,6 +120,19 @@ window#waybar.hidden {
   color: @rd1;
   padding: 0 12px;
   font-size: 12px;
+}
+
+#custom-hyprscrolling {
+  padding: 0 12px;
+  font-size: 12px;
+}
+
+#custom-hyprscrolling.on {
+  color: @rd1;
+}
+
+#custom-hyprscrolling.off {
+  color: @fg;
 }
 
 #window {
@@ -160,6 +174,7 @@ window#waybar.hidden {
 #custom-calendar:hover,
 #custom-netspeed:hover,
 #custom-gpu:hover,
+#custom-hyprscrolling:hover,
 #disk:hover,
 #idle_inhibitor:hover {
   background-color: @hover-bg;
