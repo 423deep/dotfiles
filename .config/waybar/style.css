@@ -7,7 +7,7 @@
 @define-color hover-bg #313244;
 
 * {
-  font-family: "JetBrainsMono Nerd Font Propo";
+  font-family: 'Adwaita Mono';
   font-size: 13px;
   font-weight: bold;
   border: none;

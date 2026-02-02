@@ -4,7 +4,7 @@ config-file = ?"~/.config/omarchy/current/theme/ghostty.conf"
 config-file = ?"~/.config/ghostty/rose-pine-palette.conf"
 
 # Font
-font-family = "JetBrainsMono Nerd Font"
+font-family = "Adwaita Mono"
 font-style = Regular
 font-size = 13
 
